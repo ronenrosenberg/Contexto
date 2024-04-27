@@ -1,0 +1,42 @@
+{
+    "Aristotle": [
+        "The end goal of every action is the pursuit of good.",
+        "The end of an activity is always more choiceworthy than the activity of itself.",
+        "Aristotle believes that happiness is the generally accepted term for the ultimate human good.",
+        "The human good is trying to be virtuous.",
+        "Living cannot be the human function because it is a function shared by other species.",
+        "Virtue is not equivalent to happiness because you can be virtuous and still be unhappy."
+    ],
+
+    "Kant’s Deontology": [
+        "Enlightenment is maturity to understand without",
+        "A \"Private\" use of reason is representing the private interest of employers, ruler, etc",
+        "Goodwill is good in itself",
+        "The purpose of reason is to produce goodwill for good",
+        "Duty is something everyone has an obligation to do"
+    ],
+    
+    "Mill’s Utilitarianism": [
+        "Bentham believes that there is no justification for the torment of animals.",
+        "It doesn’t matter whether a being is rational, but if they can suffer.",
+        "The greatest happiness principle states that people should pursue the action that promotes the greatest net happiness.",
+        "Happiness and unhappiness are categorized as pain and pleasure.",
+        "The two types of pleasures are as sensational and mental."
+    ],
+
+    "Aquinas’ Natural Law": [
+        "Moral philosophy is defined by Aquinas as knowledge of how we should act.",
+        "Natural law in the context of Aristotelian ethics means the system by which right and wrong govern reasoning and behavior.",
+        "Human action for Aquinas is defined as an action done with deliberation, consciousness, and done voluntarily.",
+        "The \"good man\" for Aristotle and Aquinas is rational and skilled in thinking.",
+        "The biological values to which we are naturally inclined are life and procreation."
+    ],
+
+    "Held and Care Ethics": [
+        "Care is both value and practice.",
+        "What lies between individual interests and humanity in general  are intimate human relationships.",
+        "The ability to think and act as if we were independent depends on our relationships with others.",
+        "The priority for ethics of care include values of trust, solidarity, mutual concern, and empathetic responsiveness.",
+        "Ideally there would be different domains for integrating care and justice."
+    ]
+}
