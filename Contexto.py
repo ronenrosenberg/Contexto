@@ -8,8 +8,8 @@ import os
 import json
 import random
 
+#load quotes
 with open('quotes.json', 'r') as file:
-    # Load the JSON data from the file into a Python dictionary
     quotes = json.load(file)
 
 # Check if the model file exists
@@ -32,13 +32,14 @@ while True:
         break
     print("Sorry, what?")
     print()
+print()
 
 tagged_sentence = nltk.pos_tag(selected)
 
 important_words = []
 #for all words in the sentence
 for i in range(len(tagged_sentence)):
-    #if word is a verb or nounj
+    #if word is a verb or noun
     to_be_guessed = False
     similar_list = []
     if tagged_sentence[i][1][0] in ["V", "N"]:
@@ -64,7 +65,7 @@ def print_and_underline():
                 print_list.append('\033[4m' + important_words[i][1][-1].replace("_", " ") + '\033[0m')
         #else just print it
         else:
-            if i == 0:  
+            if i == 0:
                 print_list.append(important_words[i][1][-1].capitalize().replace("_", " "))
             else:
                 print_list.append(important_words[i][1][-1].replace("_", " "))
@@ -89,17 +90,18 @@ def check_if_better(user_guess):
                 else:
                     new_index = word[1][:-1].index(user_guess)
                     word[1] = word[1][:new_index+1]
-                    print(f"Nice! \"{user_guess}\" is {new_index} degrees of separation away from the actual word.")
+                    print(f"Nice! \"{user_guess}\" is {new_index} degrees of separation away from an actual word.")
     if not changed:
         print("Sorry, but that doesn't seem to be right.")
     print()
 
-
+#main logic loop
 while True:
     print_and_underline()
-    user_guess = input("Do you have a guess to improve the sentence? ")
+    user_guess = input("Do you have a guess to improve the sentence? \n")
     check_if_better(user_guess)
     
+    #bruh how tf did I end up using SQL in python
     end_condition = not [data[1] for data in important_words if data[0] and len(data[1]) > 1]
     if end_condition: 
         print("You figured out the sentence! You win!")
