@@ -48,12 +48,10 @@ for i in range(len(tagged_sentence)):
         #make sure words in similar list are all lowercase and of same part of speech
         similar_list = [data[0].lower().replace(".","").replace(",","").replace("!","").replace("?","") for data in similar_list if nltk.pos_tag([data[0]])[0][1] == tagged_sentence[i][1] and tagged_sentence[i][0] != data[0].lower()]
         
-        print(similar_list)
-        to_be_guessed = True
-        #index to replace, original word, and similar word list
+        to_be_guessed = True        #index to replace, original word, and similar word list
     important_words.append([to_be_guessed, [tagged_sentence[i][0].lower()] + similar_list])
 
-
+#just prints and underlines any words that still aren't correct
 def print_and_underline():
     print_list = []
     for i in range(len(important_words)):
@@ -78,6 +76,7 @@ def print_and_underline():
             print(print_list[i], end='')
     print('.')
 
+#function that checks if a better, more similar word has been inputted by the user
 def check_if_better(user_guess):
     changed = False
     for word in important_words:
