@@ -100,7 +100,6 @@ while True:
     user_guess = input("Do you have a guess to improve the sentence? \n")
     check_if_better(user_guess)
     
-    #bruh how tf did I end up using SQL in python
     end_condition = not [data[1] for data in important_words if data[0] and len(data[1]) > 1]
     if end_condition: 
         print("You figured out the sentence! You win!")
